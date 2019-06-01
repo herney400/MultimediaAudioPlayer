@@ -170,8 +170,17 @@ class AudioPlayer {
 
     _updateBasigGUIElement(el) {
         if (el.DOMElement instanceof HTMLElement) {
-            el.DOMElement.innerHTML = el.value;
-        }
+
+            var minutes = Math.floor( el.value / 60 );
+            var seconds = Math.floor(el.value % 60);
+            
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds :seconds;
+
+           //el.DOMElement.innerHTML = el.value ;
+           el.DOMElement.innerHTML = minutes + ':' + seconds ;
+
+          }
     }
 
     get gui() {

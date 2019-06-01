@@ -90,6 +90,7 @@ body{
 
 .currentTime, .totalTime{
     flex:1;
+    color: #CE001E;
 }
 
 .progressBar{
