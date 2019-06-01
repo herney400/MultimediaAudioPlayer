@@ -140,10 +140,8 @@ class AudioPlayer {
 
             },
             back: () => {
-                
-                 
-                    this.player.load();
-                    this.player.play();
+                                 
+                    this.player.currentTime=0;
                 
                 },
             next: () => false,
